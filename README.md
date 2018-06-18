@@ -7,8 +7,10 @@ WorkFlow:
 1. Start the server environment,
 2. Set-up the back-end database environment MongoDB
 3. Define the routes that queries the Database (baseurl = /employees)
+  <br>
   `localhost:3000/Employees` 👈🏼 baseURL
-  `localhost:3000/Employees/` 👈🏼 accesses the GET route from controller
+  <br>
+  `localhost:3000/Employees/list` 👈🏼 accesses the GET route from controller
 
 
 <a href="https://www.youtube.com/watch?v=UYh6EvpQquw">...src</a>
