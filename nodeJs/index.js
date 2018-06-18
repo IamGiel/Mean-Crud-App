@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 //to add the router from controller to this application
 //we add this middleware 👇🏼
-app.use("router", )
+app.use("/employees", employeeController); 
 
 //to start the express server
 //👇

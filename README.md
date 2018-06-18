@@ -6,7 +6,9 @@ Implement CRUD Operations in a MEAN Stack Application from Scratch. Here, tech s
 WorkFlow:
 1. Start the server environment,
 2. Set-up the back-end database environment MongoDB
-3. Define the routes that queries the Database
+3. Define the routes that queries the Database (baseurl = /employees)
+  `localhost:3000/Employees` 👈🏼 baseURL
+  `localhost:3000/Employees/` 👈🏼 accesses the GET route from controller
 
 
 <a href="https://www.youtube.com/watch?v=UYh6EvpQquw">...src</a>
