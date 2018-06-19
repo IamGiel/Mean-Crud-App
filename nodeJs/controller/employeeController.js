@@ -40,8 +40,35 @@ router.post('/list', (req, res)=> {
     if(!err){res.send(docs)}
     else console.log("Error in retrieving Employee Data: " + JSON.stringify(err, undefined, 2));
   });
-
   //we will use `postman` to insert and test data
+})
+
+// update method
+router.put('/list/:id', (req, res) => {
+    //check if the id is valid
+  if(!ObjectId.isValid(req.params.id))
+    return res.status(400).send('No Record with given id : '`${req.params.id}`);
+  let emp = {
+    name: req.body.name,
+    position: req.body.position,
+    office: req.body.office,
+    salary: req.body.salary,
+  };
+  Employee.findOneAndUpdate(req.params.id, {$set: emp}, {new : true}, (err, docs)=>{
+    if(!err){ res.send(doc) }
+    else console.log("Error in retrieving Employee Data: " + JSON.stringify(err, undefined, 2));
+  })
+})
+// delete method
+router.delete('/list/:id', (req, res) => {
+    //check if the id is valid
+  if(!ObjectId.isValid(req.params.id))
+    return res.status(400).send('No Record with given id : '`${req.params.id}`);
+    
+  Employee.findByIdAndRemove(req.params.id, (err, docs)=>{
+    if(!err){ res.send(doc) }
+    else console.log("Error in retrieving Employee Data: " + JSON.stringify(err, undefined, 2));
+  })
 })
 
 
