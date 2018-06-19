@@ -11,8 +11,8 @@ import { Employee } from './employee.model'
 })
 export class EmployeeService {
   // define variables
-  selectedEmployee: Employee;
-  employee: Employee[];
+  selectedEmployee: Employee; //holds a form
+  employees: Employee[]; //we will save all employees from mongodb collection here
 
   constructor() { }
 }
