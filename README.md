@@ -12,5 +12,9 @@ WorkFlow:
   <br>
   `localhost:3000/Employees/list` 👈🏼 accesses the GET route from controller
 
+4. Initialize Angular App using Angular CLI
+  - check for latest version and update <a href="https://stackoverflow.com/questions/44525746/global-angular-cli-version-greater-than-local-version">...src</a>
+  
+
 
 <a href="https://www.youtube.com/watch?v=UYh6EvpQquw">...src</a>
