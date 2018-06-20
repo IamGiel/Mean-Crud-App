@@ -20,7 +20,11 @@ export class EmployeeComponent implements OnInit {
   //functions that corresponds to the buttons
   //make this    👇🏼 nullable 👉🏼 https://www.typescriptlang.org/docs/handbook/functions.html#optional-and-default-parameters
   resetForm = (form?: NgForm) => {
-
+    //check if theres value in the form
+    if (form){
+      //then reset it 👉🏼 https://www.w3schools.com/jsref/met_form_reset.asp
+      form.reset();
+    }
   }
 
 }
