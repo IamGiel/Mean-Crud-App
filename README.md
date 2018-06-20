@@ -44,7 +44,10 @@ WorkFlow:
 - create the css as well inside `style.css`
 
 12. Import the forms module 
-- 
+
+13. Define the functions that corresponds to the buttons - `employee.component.ts`
+- rest function
+- submit function
 
 <br><hr>
 
