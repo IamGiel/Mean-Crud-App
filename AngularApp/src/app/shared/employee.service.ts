@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http"; 
-import 'rxjs/add/operator/map';
+import { map, filter, scan } from "rxjs/operators";
 import "rxjs/add/operator/toPromise";
 
 import { Employee } from './employee.model'

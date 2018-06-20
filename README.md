@@ -36,6 +36,16 @@ WorkFlow:
 - add `HttpClient` imports  <a href="https://angular.io/guide/http">...src</a>
 - add `Observable` imports  <a href="https://developer.telerik.com/topics/web-development/introduction-observables-angular-developers/">...src</a>
 
+10. Change the app.component.html so it renders the component employee's `employee.component.html` instead. 
+- copy the selector from `employee.component.ts` and place its name in a open and closing tag such as:
+- <app-employee></app-employee>
+
+11. Create the HTML skeleton using materialize form template.
+- create the css as well inside `style.css`
+
+12. Import the forms module 
+- 
+
 <br><hr>
 
 <a href="https://www.youtube.com/watch?v=UYh6EvpQquw">...src</a>

@@ -50,3 +50,7 @@ a.action-btn:hover {
     bottom: 10%;
     left: 7%;
 }
+
+input[type=text]:not(.browser-default) {
+    margin: 28px 0 8px 0;
+}
