@@ -57,7 +57,7 @@ router.put('/list/:id', (req, res) => {
     salary: req.body.salary,
   };
   Employee.findOneAndUpdate(req.params.id, {$set: emp}, {new : true}, (err, docs)=>{
-    if(!err){ res.send(doc) }
+    if(!err){ res.send(docs) }
     else console.log("Error in retrieving Employee Data: " + JSON.stringify(err, undefined, 2));
   })
 })
@@ -68,7 +68,7 @@ router.delete('/list/:id', (req, res) => {
     return res.status(400).send('No Record with given id : '`${req.params.id}`);
 
   Employee.findByIdAndRemove(req.params.id, (err, docs)=>{
-    if(!err){ res.send(doc) }
+    if(!err){ res.send(docs) }
     else console.log("Error in retrieving Employee Data: " + JSON.stringify(err, undefined, 2));
   })
 })

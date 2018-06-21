@@ -26,4 +26,13 @@ export class EmployeeService {
   getEmployeeList = (emp: Employee) => {
     return this.http.get(this.baseURL)
   }
+
+  //display the list of employees, this returns an Observable object
+  putEmployeeList = (emp: Employee) => {
+    return this.http.put(this.baseURL + `/${emp._id}`, emp);
+  }
+  //delete
+  deleteEmployeeList = (_id: string) => {
+    return this.http.delete(this.baseURL + `/${_id}`);
+  }
 }

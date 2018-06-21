@@ -64,7 +64,21 @@ input.ng-valid.ng-dirty {
 - import it in employee.component.ts (dont forget to add this to the providers array 😳 so many steps... angular should optimize this! )
 - inject it. 
 
-15. 
+15. IN the HTML define `(ngSubmit)="onSubmit(employeeForm)"` and define `onSubmit(employeeForm)` in component.ts
+- the workflow for this step involves a few things:
+- define the function variable inside the component class, and pass the parameter using angular import `ngForm`
+<pre>
+onSubmit=( form: ngForm )={
+
+}
+</pre>
+- Next, in the EmployeeService class define the function that will consume the controller API to mongodb (get, put, post update, delete, save).  This function returns an `observable` and we will subscribe to it in the employee.component.ts
+<pre>
+  getEmployeeList = (emp: Employee) => {
+    return this.http.get(this.baseURL)
+  }
+</pre>
+-Use the @angular core HttpClientModule and import it in `app.module.ts` so you can access `http` request object
 
 
 
