@@ -61,6 +61,10 @@ input.ng-valid.ng-dirty {
 14. To make the submit button work - CONSUME post request from backend (nodeJs folder)
 - to do this:
 - one: create function inside the `service`
+- import it in employee.component.ts (dont forget to add this to the providers array 😳 so many steps... angular should optimize this! )
+- inject it. 
+
+15. 
 
 
 
