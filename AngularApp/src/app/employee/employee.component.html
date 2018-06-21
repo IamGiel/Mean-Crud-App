@@ -36,6 +36,8 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
+                  <!-- click bind 👉🏼 https://angular.io/guide/user-input#click-->
+                  <!-- submit bind 👉🏼 https://angular.io/guide/forms#submit-the-form-with-ngsubmit -->
                   <button class="btn btn-custom right" type="button" (click)="resetForm(employeeForm)">Reset</button>
                   <button class="btn btn-custom right" type="submit" [disabled]="!employeeForm.valid">Submit</button>
                 </div>
