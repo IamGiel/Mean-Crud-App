@@ -73,12 +73,24 @@ onSubmit=( form: ngForm )={
 }
 </pre>
 - Next, in the EmployeeService class define the function that will consume the controller API to mongodb (get, put, post update, delete, save).  This function returns an `observable` and we will subscribe to it in the employee.component.ts
+- Use the @angular core HttpClientModule and import it in `app.module.ts` so you can access `http` request object
 <pre>
   getEmployeeList = (emp: Employee) => {
     return this.http.get(this.baseURL)
   }
 </pre>
--Use the @angular core HttpClientModule and import it in `app.module.ts` so you can access `http` request object
+- back to the `employee.component.ts` define the `onSubmit` function and subscribe to it.
+- inside subscribe we store data inside `res` (response for simplicity).
+<pre>
+ onSubmit = (form: NgForm) => {
+    this.employeeService.postEmployee(form.value).subscribe(res => {
+        //we can do stuff here
+        -reset the form this.resetForm(form);
+        -make a materialize `toast` etc... 
+    }
+ }
+</pre>
+
 
 
 
