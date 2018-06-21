@@ -15,7 +15,6 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json())
 app.use(cors({origin: "http://localhost:4200/"})); //use cors, pass an object with property origin: the url of the site needing cors
-
 //to add the router from controller to this application
 //we add this middleware 👇🏼
 app.use("/employees", employeeController); 

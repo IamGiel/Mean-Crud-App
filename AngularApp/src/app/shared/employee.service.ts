@@ -19,7 +19,11 @@ export class EmployeeService {
 
   postEmployee = (emp: Employee) => {
     //to make the post request we have to make an http call to the server (nodejs project)
-    //we use the HttpClient imported above, we must inject it first to use it
+    //we use the HttpClient imported above, we must inject it first to use it (line 18)
     return this.http.post(this.baseURL, emp)
   };
+  //display the list of employees, this returns an Observable object
+  getEmployeeList = (emp: Employee) => {
+    return this.http.get(this.baseURL)
+  }
 }

@@ -66,7 +66,7 @@ router.delete('/list/:id', (req, res) => {
     //check if the id is valid
   if(!ObjectId.isValid(req.params.id))
     return res.status(400).send('No Record with given id : '`${req.params.id}`);
-    
+
   Employee.findByIdAndRemove(req.params.id, (err, docs)=>{
     if(!err){ res.send(doc) }
     else console.log("Error in retrieving Employee Data: " + JSON.stringify(err, undefined, 2));

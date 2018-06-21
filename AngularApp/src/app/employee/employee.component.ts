@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
 
-import { EmployeeService } from '../shared/employee.service'; //add this in `providers` array
+import { EmployeeService } from "../shared/employee.service"; //add this in `providers` array
 import { Employee } from "../shared/employee.model";
-import { newEmployee } from "../../../../nodeJs/controller/employeeController.js"
-import { observable } from 'rxjs/internal/symbol/observable';
+import { newEmployee } from "../../../../nodeJs/controller/employeeController.js";
+import { observable } from "rxjs/internal/symbol/observable";
 
 declare var M: any; // 👈🏼to use `M` in Toast Materialize
 
@@ -16,6 +16,7 @@ declare var M: any; // 👈🏼to use `M` in Toast Materialize
   providers: [EmployeeService] //add injection here
 })
 export class EmployeeComponent implements OnInit {
+  
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
@@ -28,13 +29,12 @@ export class EmployeeComponent implements OnInit {
     //Create a function on employee.services.ts
     //Import it, add it to providers, and inject it in the constructor
     //👇🏼 an observable                              👇🏼 we subscribe, then a callback
-    this.employeeService.postEmployee(form.value).subscribe((res)=>{
+    this.employeeService.postEmployee(form.value).subscribe(res => {
       this.resetForm(form); // reset the form after submitting
       M.toast({ html: "Successfull!!!", classes: "rounded" });
 
+      // make sure cors is enabled 👉🏼 https://www.maxcdn.com/one/visual-glossary/cors/
     });
-
-
   };
 
   //functions that corresponds to the buttons
