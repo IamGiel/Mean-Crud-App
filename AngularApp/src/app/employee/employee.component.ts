@@ -16,11 +16,12 @@ declare var M: any; // 👈🏼to use `M` in Toast Materialize
   providers: [EmployeeService] //add injection here
 })
 export class EmployeeComponent implements OnInit {
-  
+
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
     this.resetForm();
+    this.refreshEmployeeList();
   }
 
   onSubmit = (form: NgForm) => {
@@ -52,4 +53,12 @@ export class EmployeeComponent implements OnInit {
       salary: ""
     };
   };
+
+  refreshEmployeeList=()=>{
+                                                  //  👇🏼 will contain array of response
+    this.employeeService.getEmployeeList().subscribe((res)=>{
+      //we will assign `res` to the `employee.service.ts`
+      this.employeeService.employees = res as Employee[]; // typescript casting 👉🏼 https://stackoverflow.com/questions/12792695/typescript-casting-arrays#35181988
+    })
+  }
 }
