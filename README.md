@@ -56,6 +56,7 @@ input.ng-valid.ng-dirty {
     border-bottom-color: red !important;
 }
 </pre>
+- define the functions that is set to run the `(click)`, `(ngSubmit)` and `[disabled]` one way binding inside the `employee.component.ts`
 
 <br><hr>
 
