@@ -17,6 +17,7 @@ export class EmployeeComponent implements OnInit {
   constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
+    this.resetForm();
   }
 
   //functions that corresponds to the buttons
