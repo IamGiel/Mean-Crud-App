@@ -90,6 +90,8 @@ onSubmit=( form: ngForm )={
     }
  }
 </pre>
+- DO THIS FOR THE REST OF the API request to mongodb.
+- Enable CORS or otherwise it will not consume data from mongodb.  
 
 
 
