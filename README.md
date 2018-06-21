@@ -48,6 +48,14 @@ WorkFlow:
 13. Define the functions that corresponds to the buttons - `employee.component.ts`
 - rest function
 - submit function
+- apply form validations using `required` and styling `ng-dirty` and `ng-invalid`
+- ... so that the input field is red when user has not provided an info
+- Example:
+<pre>
+input.ng-valid.ng-dirty {
+    border-bottom-color: red !important;
+}
+</pre>
 
 <br><hr>
 
