@@ -46,7 +46,7 @@ WorkFlow:
 12. Import the forms module 
 
 13. Define the functions that corresponds to the buttons - `employee.component.ts`
-- rest function
+- reset function
 - submit function
 - apply form validations using `required` and styling `ng-dirty` and `ng-invalid`
 - ... so that the input field is red when user has not provided an info
