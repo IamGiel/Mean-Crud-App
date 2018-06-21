@@ -25,6 +25,8 @@ router.get("/list/:id", (req, res) => {
   })
 });
 
+// 👇🏼this route (router.post) will be consumed by Angular so that user can submit a form to the db
+
 // add our POST request to add data to our database
 router.post('/list', (req, res)=> {
   //we need to create an Employee model class and save it in a var called `emp` 

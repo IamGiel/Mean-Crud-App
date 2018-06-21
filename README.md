@@ -58,6 +58,16 @@ input.ng-valid.ng-dirty {
 </pre>
 - define the functions that is set to run the `(click)`, `(ngSubmit)` and `[disabled]` one way binding inside the `employee.component.ts`
 
+14. To make the submit button work - CONSUME post request from backend (nodeJs folder)
+- to do this:
+- one: create function inside the `service`
+
+
+
+
+
+
+
 <br><hr>
 
 <a href="https://www.youtube.com/watch?v=UYh6EvpQquw">...src</a>
